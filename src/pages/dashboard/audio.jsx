@@ -19,7 +19,7 @@ import MenuItem from '@mui/material/MenuItem';
 import CachedIcon from '@mui/icons-material/Cached';
 import LinearProgress from '@mui/material/LinearProgress';
 import { useUserController, setCharPerMonth, setLoadingOverlay } from "@/context/user";
-import { createAxios } from "@/configs/axios";
+import { createAxios, url } from "@/configs/axios";
 import { toast } from "react-toastify";
 import CircularProgress from '@mui/material/CircularProgress';
 import { useAudioController, setLinkAudio, setAudioInfo, setListHistoryAudios, setIsPlay } from "@/context/audio";
@@ -120,7 +120,7 @@ const Audio = (props) => {
                 text: textOrigin,
                 speaker: data.data.speaker,
                 id: data.data.id,
-                linkAudio: `http://192.168.1.142:2214/${data.data.linkAudio}`,
+                linkAudio: `${url}/${data.data.linkAudio}`,
             })
 
             const newHistoryAudio = [...listHistoryAudios];
