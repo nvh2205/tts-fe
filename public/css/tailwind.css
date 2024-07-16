@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.divider {
+    align-items: center;
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    height: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    white-space: nowrap;
+}
+
+@-webkit-keyframes circular {
+    from {
+      -webkit-transform:rotate(0deg);
+      -moz-transform:rotate(0deg);
+      -o-transform:rotate(0deg);
+    }
+    to {
+      -webkit-transform:rotate(360deg);
+      -moz-transform:rotate(360deg);
+      -o-transform:rotate(360deg);
+    }
+  }
+  /* Standard syntax */ 
+  @keyframes circular {
+    from {
+        -webkit-transform:rotate(360deg);
+        -moz-transform:rotate(360deg);
+        -o-transform:rotate(360deg);
+
+    }
+    to {
+        -webkit-transform:rotate(0deg);
+        -moz-transform:rotate(0deg);
+        -o-transform:rotate(0deg);
+    }
+  }
+  
+  .circular {
+    animation: circular 2s linear 0s infinite;
+    -webkit-animation: circular 2s linear 0s infinite;
+    -moz-animation: circular 2s linear 0s infinite;
+    -o-animation: circular 2s linear 0s infinite; 
+  }
+  
